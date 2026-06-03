@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>为诺 | 语音 AI 待办助手</title>
+    <style>
+        :root {
+            color-scheme: light;
+            --bg: #f7f8fb;
+            --panel: #ffffff;
+            --text: #111827;
+            --muted: #4b5563;
+            --line: #e5e7eb;
+            --accent: #2563eb;
+            --accent-soft: #eaf1ff;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: var(--bg);
+            color: var(--text);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            line-height: 1.6;
+        }
+
+        .page {
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 24px 16px 40px;
+        }
+
+        .hero {
+            display: grid;
+            grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);
+            gap: 20px;
+            align-items: center;
+            padding: 24px;
+            background: var(--panel);
+            border: 1px solid var(--line);
+            border-radius: 8px;
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            padding: 6px 10px;
+            background: var(--accent-soft);
+            color: var(--accent);
+            border-radius: 999px;
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        h1 {
+            margin: 14px 0 12px;
+            font-size: 34px;
+            line-height: 1.2;
+        }
+
+        .lead {
+            margin: 0;
+            color: var(--muted);
+            font-size: 16px;
+        }
+
+        .actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 18px;
+        }
+
+        .action {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 42px;
+            padding: 0 16px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            border: 1px solid var(--line);
+            color: var(--text);
+            background: #fff;
+        }
+
+        .action.primary {
+            border-color: var(--accent);
+            background: var(--accent);
+            color: #fff;
+        }
+
+        .preview {
+            width: 100%;
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            display: block;
+            background: #fff;
+        }
+
+        .section {
+            margin-top: 18px;
+            padding: 22px 24px;
+            background: var(--panel);
+            border: 1px solid var(--line);
+            border-radius: 8px;
+        }
+
+        .section h2 {
+            margin: 0 0 14px;
+            font-size: 20px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 14px;
+        }
+
+        .item {
+            padding: 14px;
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            background: #fbfcfe;
+        }
+
+        .item strong {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 15px;
+        }
+
+        .item p {
+            margin: 0;
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        .compare {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 14px;
+        }
+
+        .compare ul {
+            margin: 10px 0 0 18px;
+            padding: 0;
+        }
+
+        .compare li {
+            margin-bottom: 8px;
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        .footnote {
+            margin-top: 18px;
+            color: #6b7280;
+            font-size: 13px;
+        }
+
+        @media (max-width: 780px) {
+            .hero,
+            .grid,
+            .compare {
+                grid-template-columns: 1fr;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            .page {
+                padding: 14px 10px 24px;
+            }
+
+            .hero,
+            .section {
+                padding: 18px 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+<main class="page">
+    <section class="hero">
+        <div>
+            <div class="eyebrow">语音 AI 待办助手</div>
+            <h1>为诺</h1>
+            <p class="lead">
+                一个面向工作、学习和生活的智能待办工具。你可以通过手动输入、文本或语音快速记录事项，
+                自动生成日程与清单，并在完成后获得个性化反馈、阶段总结和统计图表。
+            </p>
+            <div class="actions">
+                <a class="action primary" href="/todo/vip.html">查看 VIP 权益</a>
+                <a class="action" href="/todo/privacy.html">查看隐私说明</a>
+            </div>
+        </div>
+        <img class="preview" src="/todo/snap.PNG" alt="为诺应用预览">
+    </section>
+
+    <section class="section">
+        <h2>网站内容</h2>
+        <div class="grid">
+            <div class="item">
+                <strong>记录待办</strong>
+                <p>支持手动创建、智能文本和智能语音输入，降低记录成本，快速沉淀想做的事情。</p>
+            </div>
+            <div class="item">
+                <strong>规划日程</strong>
+                <p>根据输入内容自动生成每日日程和待办事项清单，把记录和安排放在同一条链路中。</p>
+            </div>
+            <div class="item">
+                <strong>总结反馈</strong>
+                <p>任务完成后可获得 AI 点评与鼓励，也可以按阶段查看成果统计和收获总结。</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>核心原则</h2>
+        <div class="grid">
+            <div class="item">
+                <strong>只提供刚需功能</strong>
+                <p>聚焦记录、安排、提醒、反馈和复盘，尽量用更少操作完成时间管理。</p>
+            </div>
+            <div class="item">
+                <strong>只收集必要信息</strong>
+                <p>仅在实现语音记录、AI 处理、通知提醒和服务稳定运行所必需的范围内处理信息。</p>
+            </div>
+            <div class="item">
+                <strong>简洁高效</strong>
+                <p>界面和功能都以效率为优先，适合持续使用的日常待办与日程管理场景。</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>功能与权益概览</h2>
+        <div class="compare">
+            <div class="item">
+                <strong>普通用户</strong>
+                <ul>
+                    <li>手动创建不限次数</li>
+                    <li>智能文本每天一次</li>
+                    <li>智能语音每天一次</li>
+                    <li>个性鼓励每天一次</li>
+                </ul>
+            </div>
+            <div class="item">
+                <strong>VIP 用户</strong>
+                <ul>
+                    <li>更多 AI 使用额度</li>
+                    <li>自定义标签与高级搜索</li>
+                    <li>自定义图表与智能总结</li>
+                    <li>多设备同步、导出记录和后续升级功能</li>
+                </ul>
+            </div>
+        </div>
+        <p class="footnote">
+            首页内容整理自现有的产品介绍、隐私说明和 VIP 权益页面，用于静态展示产品定位和主要功能。
+        </p>
+    </section>
+</main>
+</body>
+</html>
