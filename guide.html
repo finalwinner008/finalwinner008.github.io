@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>使用指南 | 为诺</title>
+    <style>
+        :root {
+            color-scheme: light;
+            --bg: #f8fafc;
+            --panel: #ffffff;
+            --text: #111827;
+            --muted: #4b5563;
+            --line: #e5e7eb;
+            --accent: #2563eb;
+            --soft: #eff6ff;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: var(--bg);
+            color: var(--text);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            line-height: 1.75;
+        }
+
+        .page {
+            max-width: 920px;
+            margin: 0 auto;
+            padding: 24px 18px 40px;
+        }
+
+        .sheet {
+            background: var(--panel);
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            padding: 24px 20px 28px;
+        }
+
+        h1 {
+            margin: 0 0 10px;
+            font-size: 28px;
+            line-height: 1.3;
+        }
+
+        .lead {
+            margin: 0 0 18px;
+            color: var(--muted);
+            font-size: 15px;
+        }
+
+        h2 {
+            margin: 28px 0 10px;
+            font-size: 19px;
+            line-height: 1.4;
+            color: var(--accent);
+        }
+
+        p {
+            margin: 0 0 12px;
+            font-size: 15px;
+        }
+
+        ol {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            counter-reset: guide;
+        }
+
+        li {
+            position: relative;
+            margin-bottom: 12px;
+            padding: 14px 14px 14px 52px;
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            background: #fff;
+            font-size: 15px;
+        }
+
+        li::before {
+            counter-increment: guide;
+            content: counter(guide);
+            position: absolute;
+            left: 14px;
+            top: 14px;
+            width: 26px;
+            height: 26px;
+            border-radius: 999px;
+            background: var(--soft);
+            color: var(--accent);
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 26px;
+            text-align: center;
+        }
+
+        .shot-link {
+            display: inline-block;
+            margin-top: 6px;
+            color: var(--accent);
+            font-size: 14px;
+            text-decoration: none;
+        }
+
+        .shot-link:hover {
+            text-decoration: underline;
+        }
+
+        strong {
+            color: #0f172a;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 14px;
+            margin-top: 14px;
+        }
+
+        .shot {
+            margin: 0;
+            padding: 10px;
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            background: #fff;
+        }
+
+        .shot img {
+            display: block;
+            width: 100%;
+            border-radius: 6px;
+            border: 0;
+        }
+
+        .shot figcaption {
+            margin-top: 8px;
+            color: var(--muted);
+            font-size: 13px;
+            text-align: center;
+        }
+
+        .note {
+            margin-top: 18px;
+            padding-top: 14px;
+            border-top: 1px solid var(--line);
+            color: var(--muted);
+        }
+
+        @media (max-width: 720px) {
+            .gallery {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 480px) {
+            .page {
+                padding: 14px 10px 24px;
+            }
+
+            .sheet {
+                padding: 18px 16px 22px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            h2 {
+                font-size: 17px;
+            }
+
+            p, li {
+                font-size: 14px;
+            }
+
+            li {
+                padding-left: 48px;
+            }
+
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+<main class="page">
+    <article class="sheet">
+        <h1>使用指南</h1>
+        <p class="lead">
+            “为诺”语音 AI 待办助手支持快速记录、智能解析、日程视图切换、主题换肤和默认提醒设置。以下说明帮助你快速掌握主要操作。
+        </p>
+
+        <h2>一、常用操作</h2>
+        <ol>
+            <li>
+                <strong>管理事项</strong>：在事项列表中，右滑可完成事项，左滑可删除事项，双击事项可进入编辑。
+                <br><a class="shot-link" href="#shot-8779">查看截图</a>
+            </li>
+            <li>
+                <strong>新增事项</strong>：点击右上角按钮，可选择三种输入方式：语音输入、手动输入、文本解析。
+                <br><a class="shot-link" href="#shot-8782">查看截图</a>
+            </li>
+            <li>
+                <strong>语音 AI 解析</strong>：语音输入支持 AI 自动解析为事项，并识别优先级、时间、标签等信息。
+                <br><a class="shot-link" href="#shot-8799">查看截图</a>
+            </li>
+            <li>
+                <strong>切换视图</strong>：点击右上角按钮，可在列表视图和时间线视图之间切换。
+                <br><a class="shot-link" href="#shot-8774">查看截图</a>
+            </li>
+            <li>
+                <strong>主题换肤</strong>：进入“我的”页面，选择“主题换肤”，可设置应用主题模式。
+                <br><a class="shot-link" href="#shot-8780">查看截图</a>
+            </li>
+            <li>
+                <strong>默认提醒</strong>：进入“我的”页面，选择“设置”，可设置事项的默认提醒方式。
+                <br><a class="shot-link" href="#shot-8781">查看截图</a>
+            </li>
+        </ol>
+
+        <h2>二、界面截图</h2>
+        <p>以下截图展示了应用中的主要页面和操作入口，实际界面可能会随版本更新略有变化。</p>
+        <div class="gallery">
+            <figure class="shot" id="shot-8779">
+                <img src="/snap/IMG_8779.PNG" alt="事项管理截图" loading="lazy">
+                <figcaption>事项列表操作</figcaption>
+            </figure>
+            <figure class="shot" id="shot-8782">
+                <img src="/snap/IMG_8782.PNG" alt="新增事项截图" loading="lazy">
+                <figcaption>三种输入方式</figcaption>
+            </figure>
+            <figure class="shot" id="shot-8799">
+                <img src="/snap/IMG_8799.PNG" alt="语音 AI 解析截图" loading="lazy">
+                <figcaption>语音 AI 解析</figcaption>
+            </figure>
+            <figure class="shot" id="shot-8774">
+                <img src="/snap/IMG_8774.PNG" alt="视图切换截图" loading="lazy">
+                <figcaption>视图切换</figcaption>
+            </figure>
+            <figure class="shot" id="shot-8780">
+                <img src="/snap/IMG_8780.PNG" alt="主题换肤截图" loading="lazy">
+                <figcaption>主题换肤</figcaption>
+            </figure>
+            <figure class="shot" id="shot-8781">
+                <img src="/snap/IMG_8781.PNG" alt="默认提醒截图" loading="lazy">
+                <figcaption>默认提醒设置</figcaption>
+            </figure>
+        </div>
+
+        <p class="note">
+            如果你在使用过程中遇到问题，可优先检查通知权限、麦克风权限和网络连接状态，以确保语音输入、AI 解析和提醒功能正常工作。
+        </p>
+    </article>
+</main>
+</body>
+</html>
